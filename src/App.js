@@ -1,7 +1,7 @@
 import React from "react";
 import Input from "./components/Input";
 import Button from "./components/Button";
-// import TaskList from "./components/TaskList";
+import TaskList from "./components/TaskList";
 
 class App extends React.Component {
   render() {
@@ -11,7 +11,7 @@ class App extends React.Component {
           <Input />
           <Button />
         </div>
-        {/* <TaskList /> */}
+        <TaskList />
       </>
     );
   }

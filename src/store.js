@@ -11,7 +11,13 @@ export const reducer = (state = InitialState, action) => {
     case "CHANGE_TASK_VALUE":
       return { ...state, taskValue: action.value };
     case "ADD_TASK":
-      console.log(state, action);
+      const { tasks, taskValue } = state;
+
+      return {
+        ...state,
+        tasks: [...tasks, taskValue],
+        taskValue: ""
+      };
     default:
       return state;
   }

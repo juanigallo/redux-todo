@@ -10,8 +10,20 @@ class Input extends React.Component {
   }
 
   render() {
-    return <input onChange={(e) => this.handleChange(e)} type="text" />;
+    const { taskValue } = this.props;
+    return (
+      <input
+        onChange={(e) => this.handleChange(e)}
+        type="text"
+        value={taskValue}
+      />
+    );
   }
 }
 
-export default connect()(Input);
+function mapStateToProps(state) {
+  return {
+    taskValue: state.taskValue
+  };
+}
+export default connect(mapStateToProps)(Input);
